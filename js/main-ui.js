@@ -1,0 +1,1 @@
+export function initMenu(){const e=document.getElementById("hamburger-menu"),t=document.getElementById("main-nav");e&&t&&e.addEventListener("click",(function(){t.classList.toggle("active")}))}export function updateActiveLink(e){document.querySelectorAll(".main-nav a[data-link]").forEach((t=>{t.getAttribute("href")===e?t.classList.add("active"):t.classList.remove("active")}))}
