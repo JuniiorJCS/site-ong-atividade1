@@ -161,7 +161,7 @@ legend {
 }
 
 .hero {
-    background-image: url("/imagens/banner-home.png");
+    background-image: url("../imagens/banner-home.png");
     background-size: cover;
     background-position: center;
     min-height: 400px;
