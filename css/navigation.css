@@ -1,0 +1,65 @@
+/* =========================================
+   5. NAVEGAÇÃO
+   Header, Menu Principal e
+   Menu Hambúrguer (Mobile).
+   ========================================= */
+
+/* ----- Cabeçalho (Header) ----- */
+header {
+    width: 100%;
+    background-color: var(--color-white);
+    border-bottom: 1px solid #EEE;
+    position: sticky; /* Menu fica fixo no topo */
+    top: 0;
+    z-index: 1000;
+}
+
+/* Usamos Flexbox para alinhar logo e nav */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+}
+
+/* ----- Navegação Desktop ----- */
+.main-nav ul {
+    display: flex; /* Alinha os itens do menu */
+}
+
+.main-nav ul li a {
+    display: block;
+    padding: var(--space-xs) var(--space-sm);
+    text-decoration: none;
+    color: var(--color-dark);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-md);
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active { /* 'active' para a página atual */
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* ----- Menu Hambúrguer (Mobile) ----- */
+.hamburger-menu {
+    display: none; /* Escondido no desktop */
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: var(--space-xs);
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--color-dark);
+    transition: all 0.3s ease-in-out;
+}

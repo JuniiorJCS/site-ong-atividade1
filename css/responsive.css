@@ -1,0 +1,94 @@
+/* =========================================
+   6. RESPONSIVIDADE (Mobile-First)
+   Aqui usamos @media queries para adaptar
+   o layout para diferentes tamanhos de tela.
+   ========================================= */
+
+/* ----- Breakpoint 1: Tablets (Portrait) e Celulares Grandes ----- */
+/* (min-width: 576px) */
+@media (min-width: 576px) {
+    .container {
+        width: 90%;
+    }
+}
+
+/* ----- Breakpoint 2: Tablets (Landscape) ----- */
+/* (min-width: 768px) */
+@media (min-width: 768px) {
+    /* Define colunas para telas médias */
+    .col-md-3 { flex-basis: 25%; }
+    .col-md-4 { flex-basis: 33.33%; }
+    .col-md-6 { flex-basis: 50%; }
+    .col-md-8 { flex-basis: 66.66%; }
+    .col-md-9 { flex-basis: 75%; }
+    .col-md-12 { flex-basis: 100%; }
+
+    /* Lógica do Menu: Esconde o hambúrguer e mostra o menu desktop */
+    .hamburger-menu {
+        display: none;
+    }
+    .main-nav {
+        display: block !important; /* Garante que o menu desktop seja visível */
+    }
+}
+
+/* ----- Breakpoint 3: Desktops Pequenos ----- */
+/* (min-width: 992px) */
+@media (min-width: 992px) {
+    .container {
+        width: 85%;
+    }
+    /* Define colunas para telas grandes */
+    .col-lg-3 { flex-basis: 25%; }
+    .col-lg-4 { flex-basis: 33.33%; }
+    .col-lg-6 { flex-basis: 50%; }
+    .col-lg-8 { flex-basis: 66.66%; }
+}
+
+/* ----- Breakpoint 4: Desktops Grandes ----- */
+/* (min-width: 1200px) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* ----- Lógica do Menu Mobile (padrão, < 768px) ----- */
+/* Esta regra se aplica a telas PEQUENAS (Mobile-First) */
+@media (max-width: 767px) {
+    .header-container {
+        flex-wrap: wrap; /* Permite que o menu vá para baixo */
+    }
+
+    /* Mostra o botão hambúrguer */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Esconde o menu de navegação por padrão */
+    .main-nav {
+        display: none;
+        width: 100%; /* Ocupa a largura total quando aberto */
+        margin-top: var(--space-sm);
+    }
+
+    /* O JS vai adicionar a classe '.active' para mostrar o menu */
+    .main-nav.active {
+        display: block;
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Menu vertical */
+    }
+
+    .main-nav ul li a {
+        border-bottom: 1px solid #EEE;
+    }
+
+    /* ----- Colunas no Mobile ----- */
+    /* Por padrão (mobile-first), todas as colunas ocupam 100% */
+    [class*="col-"] {
+        flex-basis: 100%;
+        margin-bottom: var(--space-sm);
+    }
+}

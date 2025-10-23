@@ -1,0 +1,201 @@
+/* =========================================
+   4. COMPONENTES
+   Botões, Cards, Formulários, Badges, Alertas
+   ========================================= */
+
+/* ----- Botões ----- */
+/* Estilo base do botão */
+.btn {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--font-size-md);
+    font-weight: var(--font-weight-bold);
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Botão Primário (principal) */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* Estados do Botão (hover, focus, active) */
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary:active {
+    transform: translateY(1px); /* Efeito de clique */
+}
+
+/* Botão Secundário (destaque) */
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+    background-color: var(--color-secondary-light);
+    color: var(--color-white);
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ----- Cards (para 'projetos.html') ----- */
+.card {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden; /* Garante que a imagem não 'vaze' */
+    margin-bottom: var(--space-md);
+    display: flex;
+    flex-direction: column; /* Organiza o card verticalmente */
+}
+
+.card-image {
+    width: 100%;
+    object-fit: cover; /* Garante que a imagem cubra o espaço */
+}
+
+.card-content {
+    padding: var(--space-md);
+    min-height: 244px;
+}
+
+.card-content h3 {
+    margin-bottom: var(--space-xs);
+    color: var(--color-primary);
+}
+
+.card-content p {
+    min-height: 76px;
+}
+
+/* ----- Formulários ('cadastro.html') ----- */
+.form-group {
+    margin-bottom: var(--space-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-xs);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"] {
+    width: 100%;
+    padding: var(--space-xs) var(--space-sm);
+    border: 1px solid #CCC;
+    border-radius: var(--border-radius);
+    font-size: var(--font-size-md);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 5px rgba(0, 90, 156, 0.3);
+}
+
+/* Validação Visual (CSS) */
+.form-group.interacted input:invalid {
+    border-color: #E74C3C; /* Vermelho para erro */
+}
+.form-group input:valid {
+    border-color: #2ECC71; /* Verde para sucesso */
+}
+
+fieldset {
+    border: 1px solid #DDD;
+    border-radius: var(--border-radius);
+    padding: var(--space-md);
+    margin-bottom: var(--space-md);
+}
+
+legend {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-primary);
+    padding: 0 var(--space-xs);
+}
+
+/* ----- Badges / Tags ----- */
+.badge {
+    display: inline-block;
+    padding: var(--space-xxs) var(--space-xs);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-bold);
+    border-radius: 4px;
+    background-color: var(--color-light-gray);
+    color: var(--color-gray);
+}
+.badge-primary {
+    background-color: var(--color-primary-light);
+    color: var(--color-white);
+}
+
+/* ----- Alertas (Componente de Feedback) ----- */
+.alert {
+    padding: var(--space-sm);
+    margin-bottom: var(--space-md);
+    border-radius: var(--border-radius);
+    border: 1px solid transparent;
+}
+.alert-success {
+    background-color: #D4EDDA;
+    border-color: #C3E6CB;
+    color: #155724;
+}
+
+.hero {
+    background-image: url("/imagens/banner-home.png");
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.hero h1 {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero p {
+    font-size: var(--font-size-lg);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+}
+
+.hero a {
+    margin-top: var(--space-sm);
+}
+
+.missao {
+    margin-top: var(--space-xl);
+}
+
+.missao ul {
+    list-style: disc; padding-left: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.card-voluntario {
+    border-radius: var(--border-radius);
+    margin-top: var(--space-sm);
+}

@@ -1,0 +1,48 @@
+/* =========================================
+   1. DESIGN SYSTEM (VARIÁVEIS CSS)
+   Todas as nossas decisões de design
+   ficam centralizadas aqui.
+   ========================================= */
+:root {
+    /* ----- Paleta de Cores (8 cores) ----- */
+    
+    /* Primárias */
+    --color-primary: #005A9C;         /* Azul profundo (confiança) */
+    --color-primary-light: #3D85C6;   /* Azul mais claro (links) */
+
+    /* Secundárias / Destaque */
+    --color-secondary: #FF8C00;      /* Laranja (energia, ação) */
+    --color-secondary-light: #FFA500; /* Laranja mais claro (hover) */
+
+    /* Neutras */
+    --color-dark: #222222;            /* Preto suave (textos) */
+    --color-gray: #666666;            /* Cinza (textos secundários) */
+    --color-light-gray: #F4F4F4;      /* Cinza claro (fundos) */
+    --color-white: #FFFFFF;           /* Branco */
+
+    /* ----- Tipografia (5+ tamanhos) ----- */
+    --font-family-base: 'Arial', 'Helvetica', sans-serif;
+    --font-size-base: 16px;           /* (1 rem) */
+    --font-size-sm: 0.875rem;         /* 14px */
+    --font-size-md: 1rem;             /* 16px */
+    --font-size-lg: 1.25rem;          /* 20px */
+    --font-size-xl: 1.75rem;          /* 28px */
+    --font-size-xxl: 2.5rem;          /* 40px */
+    
+    --font-weight-light: 300;
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* ----- Sistema de Espaçamento (Modular 8px) ----- */
+    --space-xxs: 4px;
+    --space-xs: 8px;
+    --space-sm: 16px;
+    --space-md: 24px;
+    --space-lg: 32px;
+    --space-xl: 48px;
+    --space-xxl: 64px;
+
+    /* ----- Outros ----- */
+    --border-radius: 8px;
+    --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
